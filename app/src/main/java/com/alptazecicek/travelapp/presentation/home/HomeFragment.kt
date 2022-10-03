@@ -1,12 +1,13 @@
-package com.alptazecicek.travelapp
+package com.alptazecicek.travelapp.presentation.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.alptazecicek.travelapp.R
 
-class GuideFragment : Fragment() {
+class HomeFragment : Fragment() {
 
 
     /*override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,8 +20,6 @@ class GuideFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_guide, container, false)
+        return inflater.inflate(R.layout.fragment_home, container, false)
     }
-
-
 }

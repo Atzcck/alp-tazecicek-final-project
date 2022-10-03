@@ -4,16 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    tools:context=".presentation.home.HomeFragment">
 
     <ImageView
+
         android:id="@+id/homeBackground"
         android:layout_width="0dp"
-        android:layout_height="400dp"
-        android:cropToPadding="true"
-        android:src="@drawable/home_screen_background"
+        android:layout_height="350dp"
         android:background="@android:color/white"
+        android:cropToPadding="true"
         android:elevation="@dimen/_25sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/home_screen_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,8 +25,8 @@
         android:id="@+id/homeFlightImageBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="304dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="256dp"
         android:backgroundTint="#50808cc1"
         android:clickable="true"
         android:elevation="@dimen/_25sdp"
@@ -81,7 +83,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:backgroundTint="#50808cc1"
+        android:backgroundTint="#30808cc1"
         android:elevation="@dimen/_25sdp"
         android:clickable="true"
         android:focusable="true"
@@ -137,13 +139,70 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_16sdp"
-        android:layout_marginTop="176dp"
-        android:text="Where’s your\nnext destination?"
-        android:textSize="@dimen/_32ssp"
-        android:textFontWeight="700"
+        android:layout_marginTop="124dp"
         android:elevation="@dimen/_25sdp"
         android:fontFamily="@font/source_sans_pro"
+        android:text="Where’s your\nnext destination?"
         android:textColor="@color/white"
+        android:textFontWeight="700"
+        android:textSize="@dimen/_32ssp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/source_sans_pro"
+        android:text="DEALS"
+        android:textColor="@color/black"
+        android:textFontWeight="600"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeBackground" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tabLayout"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:tabIndicatorColor="#FF667A"
+        app:tabSelectedTextColor="#FF667A">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All" />
+
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flights" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hotels" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trasportation" />
+    </com.google.android.material.tabs.TabLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
