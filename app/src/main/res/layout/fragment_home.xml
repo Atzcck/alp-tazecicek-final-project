@@ -6,15 +6,144 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
-    <TextView
-        android:id="@+id/textView"
+    <ImageView
+        android:id="@+id/homeBackground"
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+        android:cropToPadding="true"
+        android:src="@drawable/home_screen_background"
+        android:background="@android:color/white"
+        android:elevation="@dimen/_25sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/homeFlightImageBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Home Fragment"
-        android:textSize="26sp"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="304dp"
+        android:backgroundTint="#50808cc1"
+        android:clickable="true"
+        android:elevation="@dimen/_25sdp"
+        android:focusable="true"
+        android:src="@drawable/ic_plane"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/homeFlightTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/source_sans_pro"
+        android:text="Flights"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16ssp"
+        android:textFontWeight="700"
+        android:elevation="@dimen/_25sdp"
+        app:layout_constraintEnd_toEndOf="@+id/homeFlightImageBtn"
+        app:layout_constraintStart_toStartOf="@+id/homeFlightImageBtn"
+        app:layout_constraintTop_toBottomOf="@+id/homeFlightImageBtn" />
+
+    <ImageButton
+        android:id="@+id/homeHotelImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:backgroundTint="#50808cc1"
+        android:elevation="@dimen/_25sdp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_hotel"
+        app:layout_constraintStart_toEndOf="@+id/homeFlightImageBtn"
+        app:layout_constraintTop_toTopOf="@+id/homeFlightImageBtn" />
+
+    <TextView
+        android:id="@+id/homeHotelsTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/source_sans_pro"
+        android:text="Hotels"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16ssp"
+        android:textFontWeight="700"
+        android:elevation="@dimen/_25sdp"
+        app:layout_constraintEnd_toEndOf="@+id/homeHotelImageButton"
+        app:layout_constraintStart_toStartOf="@+id/homeHotelImageButton"
+        app:layout_constraintTop_toBottomOf="@+id/homeHotelImageButton" />
+
+    <ImageButton
+        android:id="@+id/homeCarImageBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:backgroundTint="#50808cc1"
+        android:elevation="@dimen/_25sdp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_car"
+        app:layout_constraintStart_toEndOf="@+id/homeHotelImageButton"
+        app:layout_constraintTop_toTopOf="@+id/homeHotelImageButton" />
+
+    <TextView
+        android:id="@+id/homeCarsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/source_sans_pro"
+        android:text="Cars"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16ssp"
+        android:textFontWeight="700"
+        android:elevation="@dimen/_25sdp"
+        app:layout_constraintEnd_toEndOf="@+id/homeCarImageBtn"
+        app:layout_constraintStart_toStartOf="@+id/homeCarImageBtn"
+        app:layout_constraintTop_toBottomOf="@+id/homeCarImageBtn" />
+
+    <ImageButton
+        android:id="@+id/homeTaxiImageBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:backgroundTint="#50808cc1"
+        android:elevation="@dimen/_25sdp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_taxi"
+        app:layout_constraintStart_toEndOf="@+id/homeCarImageBtn"
+        app:layout_constraintTop_toTopOf="@+id/homeCarImageBtn" />
+
+    <TextView
+        android:id="@+id/homeTaxiTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/source_sans_pro"
+        android:text="Taxi"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16ssp"
+        android:textFontWeight="700"
+        android:elevation="@dimen/_25sdp"
+        app:layout_constraintEnd_toEndOf="@+id/homeTaxiImageBtn"
+        app:layout_constraintStart_toStartOf="@+id/homeTaxiImageBtn"
+        app:layout_constraintTop_toBottomOf="@+id/homeTaxiImageBtn" />
+
+    <TextView
+        android:id="@+id/homeTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="176dp"
+        android:text="Where’s your\nnext destination?"
+        android:textSize="@dimen/_32ssp"
+        android:textFontWeight="700"
+        android:elevation="@dimen/_25sdp"
+        android:fontFamily="@font/source_sans_pro"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
