@@ -7,5 +7,5 @@ import retrofit2.http.GET
 interface ApiService {
 
     @GET("AllTravelList")
-    fun getAllTravelList() : Call<DealsModel>
+    fun getAllTravelList() : Call<List<DealsModel>>
 }

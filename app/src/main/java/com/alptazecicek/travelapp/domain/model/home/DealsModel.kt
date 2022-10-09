@@ -1,5 +1,6 @@
 package com.alptazecicek.travelapp.domain.model.home
 
+
 data class DealsModel(
     val category: String,
     val city: String,
