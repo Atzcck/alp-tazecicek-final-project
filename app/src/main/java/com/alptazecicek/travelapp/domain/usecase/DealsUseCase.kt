@@ -3,6 +3,7 @@ package com.alptazecicek.travelapp.domain.usecase
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.alptazecicek.travelapp.adapters.DealsAdapter
 import com.alptazecicek.travelapp.domain.model.home.DealsModel
 import com.alptazecicek.travelapp.domain.repository.DealsRepository
 import retrofit2.Call
@@ -20,6 +21,7 @@ class DealsUseCase @Inject constructor(
         dealsRepository.getDeals().enqueue(object: Callback<List<DealsModel>>{
             override fun onResponse(call: Call<List<DealsModel>>, response: Response<List<DealsModel>>) {
                 _deals.value = response.body()
+
             }
 
             override fun onFailure(call: Call<List<DealsModel>>, t: Throwable) {

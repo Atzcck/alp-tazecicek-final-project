@@ -4,6 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <variable
+            name="dealsAdapter"
+            type="com.alptazecicek.travelapp.adapters.DealsAdapter" />
 
     </data>
 
@@ -170,8 +173,10 @@
             app:layout_constraintTop_toBottomOf="@+id/homeBackground" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/dealsRecycler"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:adapter="@{dealsAdapter}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/tabLayout"
